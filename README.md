@@ -3,10 +3,8 @@
 A lightweight, fast, and dependency-free custom assembler written in C. This tool reads human-readable assembly instructions (`.zasm` files) and translates them into a simplified comma-separated machine code format (`.zx` files) for a custom Virtual Machine architecture.
 
 ## Features
-* **Zero-Dependency:** Uses only standard C libraries (`<stdio.h>`, `<stdlib.h>`, `<string.h>`).
 * **Memory Efficient:** Processes files line-by-line using stack-based buffers (`fgets`) instead of loading the entire file into the heap, keeping RAM usage flat regardless of file size.
 * **Flexible Syntax:** Automatically strips trailing commas and ignores formatting inconsistencies (e.g., `ADD 9, 7` and `ADD 9 7` are parsed identically).
-* **Dynamic Opcode Overrides:** Handles edge cases like memory addressing vs. register addressing for the `STI` instruction natively during parsing.
 
 ## Supported Instruction Set
 
@@ -25,7 +23,7 @@ A lightweight, fast, and dependency-free custom assembler written in C. This too
 ## File Formats
 
 ### Input: `example.zasm`
-The assembler expects standard mnemonics followed by up to two operands.
+The assembler expects standard opcode followed by up to two operands.
 ```assembly
 ADD 9, 7
 LDI R2, 77
