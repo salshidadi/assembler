@@ -1,0 +1,24 @@
+ADD 9, 7   
+SUB 8, 4   
+ADD 5, 8   
+LDI R2, 77 
+ADR R2, 23 
+SUR R2, 5  
+MUL 3, 6   
+DIV 9, 3   
+MOD 7, 2   
+LDI R0, 20 
+LDI R1, 20 
+JMP 45     
+LDI R0, 70 
+INC R0     
+DEC R0     
+CMP R0, R1 
+JE  36     
+STI 0, 17
+LDM R3, 0
+PUSH 22    
+PUSH 77    
+POP R2     
+POP R3     
+STP 0      
